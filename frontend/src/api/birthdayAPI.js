@@ -30,4 +30,16 @@ birthdayAPI.addNewBirthday = async (birthdayData) => {
   );
 };
 
+birthdayAPI.editBirthday = async (birthdayId, updatedData) => {
+  return await tryCatchFetch(() =>
+    axios.put(`${BASE_URL}birthdays/${birthdayId}/`, updatedData)
+  );
+};
+
+birthdayAPI.deleteBirthday = async (birthdayId) => {
+  return await tryCatchFetch(() =>
+    axios.delete(`${BASE_URL}birthdays/${birthdayId}/`)
+  );
+};
+
 export default birthdayAPI;

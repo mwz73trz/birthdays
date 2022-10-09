@@ -1,14 +1,15 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const AllBirthdays = (props) => {
+  const navigate = useNavigate();
+  const singleBirthday = () => {
+    navigate(`birthdays/${props.birthday.id}`);
+  };
   return (
-    <tr>
+    <tr onClick={singleBirthday}>
       <td>{props.birthday.name}</td>
       <td>{props.birthday.birth_date}</td>
       <td>{props.birthday.age}</td>
-      <td>
-        <Link to={`birthdays/${props.birthday.id}`}>Details</Link>
-      </td>
     </tr>
   );
 };

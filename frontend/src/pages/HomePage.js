@@ -35,7 +35,6 @@ const HomePage = () => {
             <td>Name</td>
             <td>Birth Date</td>
             <td>Age</td>
-            <td>More</td>
           </tr>
         </thead>
         {renderAllBirthdays()}

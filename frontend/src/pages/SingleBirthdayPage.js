@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import birthdayAPI from "../api/birthdayAPI";
 import Card from "react-bootstrap/Card";
+import { FaEdit, FaTrashAlt } from "react-icons/fa";
 
 const SingleBirtdayPage = () => {
   const params = useParams();
@@ -34,6 +35,12 @@ const SingleBirtdayPage = () => {
           </Card.Text>
           <Card.Text>Email: {birthday.email}</Card.Text>
           <Card.Text>Phone: {birthday.phone}</Card.Text>
+          <Link>
+            <FaEdit />
+          </Link>
+          <Link to={`/birthdays/${birthday.id}/delete`}>
+            <FaTrashAlt />
+          </Link>
         </Card.Body>
       </Card>
     );
