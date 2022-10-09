@@ -25,7 +25,9 @@ const SingleBirtdayPage = () => {
     return (
       <Card style={{ width: "18rem" }}>
         <Card.Body>
-          <Card.Title>{birthday.name}</Card.Title>
+          <Card.Title>
+            {birthday.first_name} {birthday.last_name}
+          </Card.Title>
           <Card.Subtitle className="mb-2 text-muted">
             Birth Date: {birthday.birth_date} Age: {birthday.age}
           </Card.Subtitle>
@@ -35,7 +37,7 @@ const SingleBirtdayPage = () => {
           </Card.Text>
           <Card.Text>Email: {birthday.email}</Card.Text>
           <Card.Text>Phone: {birthday.phone}</Card.Text>
-          <Link>
+          <Link to={`/birthdays/${birthday.id}/update`}>
             <FaEdit />
           </Link>
           <Link to={`/birthdays/${birthday.id}/delete`}>

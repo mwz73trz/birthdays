@@ -7,7 +7,9 @@ const AllBirthdays = (props) => {
   };
   return (
     <tr onClick={singleBirthday}>
-      <td>{props.birthday.name}</td>
+      <td>
+        {props.birthday.first_name} {props.birthday.last_name}
+      </td>
       <td>{props.birthday.birth_date}</td>
       <td>{props.birthday.age}</td>
     </tr>

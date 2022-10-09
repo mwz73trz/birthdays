@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import AddNewBirthdayPage from "./pages/AddNewBirthdayPage";
 import SingleBirthdayPage from "./pages/SingleBirthdayPage";
 import DeleteBirthdayPage from "./pages/DeleteBirthdayPage";
+import UpdateBirthdayPage from "./pages/UpdateBirthdayPage";
 
 const App = () => {
   return (
@@ -16,6 +17,10 @@ const App = () => {
           <Route
             path="/birthdays/:id/delete"
             element={<DeleteBirthdayPage />}
+          />
+          <Route
+            path="/birthdays/:id/update"
+            element={<UpdateBirthdayPage />}
           />
         </Routes>
       </BrowserRouter>
