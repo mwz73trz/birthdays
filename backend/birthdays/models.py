@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import datetime
+from django.contrib.auth.models import User
 
 class Birthday(models.Model):
     first_name = models.CharField(max_length=25)
@@ -11,6 +12,7 @@ class Birthday(models.Model):
     email = models.EmailField(blank=True, null=True)
     phone = models.CharField(max_length=12, null=True, blank=True)
     birth_date = models.DateField()
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='birhtdays', blank=True, null=True)
 
     @property
     def age(self):
