@@ -18,9 +18,9 @@ birthdayAPI.getAllBirthdays = async () => {
   return await tryCatchFetch(() => axios.get(`${BASE_URL}birthdays/`));
 };
 
-birthdayAPI.getSingleBirthday = async (birthdayID) => {
+birthdayAPI.getSingleBirthday = async (birthdayId) => {
   return await tryCatchFetch(() =>
-    axios.get(`${BASE_URL}birthdays/${birthdayID}/`)
+    axios.get(`${BASE_URL}birthdays/${birthdayId}/`)
   );
 };
 

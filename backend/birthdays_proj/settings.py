@@ -68,7 +68,7 @@ WSGI_APPLICATION = 'birthdays_proj.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'birthdays',
+        'NAME': 'birthdays_db',
     }
 }
 

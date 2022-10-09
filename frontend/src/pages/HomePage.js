@@ -27,15 +27,15 @@ const HomePage = () => {
     });
   };
   return (
-    <div>
+    <div className="home-container">
       <h1>Birthdays</h1>
-      <Table striped bordered hover variant="dark">
+      <Table striped bordered hover variant="dark" size="sm">
         <thead>
           <tr>
             <td>Name</td>
-            <td>Phone</td>
             <td>Birth Date</td>
             <td>Age</td>
+            <td>More</td>
           </tr>
         </thead>
         {renderAllBirthdays()}

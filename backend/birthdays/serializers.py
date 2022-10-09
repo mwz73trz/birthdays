@@ -5,7 +5,7 @@ class BirthdaySerializer(serializers.ModelSerializer):
     name = serializers.SerializerMethodField()
     class Meta:
             model = Birthday
-            fields = ['id', 'first_name', 'last_name', 'name', 'phone', 'birth_date', 'age']
+            fields = ['id', 'first_name', 'last_name', 'address', 'city', 'state', 'zip', 'email', 'name', 'phone', 'birth_date', 'age']
             extra_kwargs = {
                 'first_name': {'write_only': True},
                 'last_name': {'write_only': True}

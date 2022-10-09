@@ -12,6 +12,11 @@ const AddNewBirthdayPage = () => {
     const birthdayData = {
       first_name: e.target.elements["first_name"].value,
       last_name: e.target.elements["last_name"].value,
+      address: e.target.elements["address"].value,
+      city: e.target.elements["city"].value,
+      state: e.target.elements["state"].value,
+      zip: e.target.elements["zip"].value,
+      email: e.target.elements["email"].value,
       phone: e.target.elements["phone"].value,
       birth_date: e.target.elements["birth_date"].value,
     };
@@ -36,6 +41,26 @@ const AddNewBirthdayPage = () => {
       <Form.Group className="mb-3" controlId="last_name">
         <Form.Label>Last Name</Form.Label>
         <Form.Control type="text" placeholder="Last Name" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="address">
+        <Form.Label>Address</Form.Label>
+        <Form.Control type="text" placeholder="Address" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="city">
+        <Form.Label>City</Form.Label>
+        <Form.Control type="text" placeholder="City" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="state">
+        <Form.Label>State</Form.Label>
+        <Form.Control type="text" placeholder="State" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="zip">
+        <Form.Label>Zip</Form.Label>
+        <Form.Control type="text" placeholder="Zip" />
+      </Form.Group>
+      <Form.Group className="mb-3" controlId="email">
+        <Form.Label>Email</Form.Label>
+        <Form.Control type="text" placeholder="Email" />
       </Form.Group>
       <Form.Group className="mb-3" controlId="phone">
         <Form.Label>Phone</Form.Label>

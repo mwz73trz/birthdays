@@ -4,6 +4,11 @@ from datetime import datetime
 class Birthday(models.Model):
     first_name = models.CharField(max_length=25)
     last_name = models.CharField(max_length=25)
+    address = models.CharField(max_length=75)
+    city = models.CharField(max_length=50)
+    state = models.CharField(max_length=50)
+    zip = models.CharField(max_length=5)
+    email = models.EmailField(blank=True, null=True)
     phone = models.CharField(max_length=12, null=True, blank=True)
     birth_date = models.DateField()
 
