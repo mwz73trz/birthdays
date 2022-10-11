@@ -1,9 +1,12 @@
 from rest_framework.viewsets import ModelViewSet
+from rest_framework import filters
 from rest_framework import permissions
 from .serializers import BirthdaySerializer, UserSerializer
 from .models import Birthday, User
 
 class BirthdayViewSet(ModelViewSet):
+    search_fields = ['first_name', 'last_name', 'birth_date', 'phone', 'email']
+    filter_backends = (filters.SearchFilter,)
     queryset = Birthday.objects.all()
     serializer_class = BirthdaySerializer
 
